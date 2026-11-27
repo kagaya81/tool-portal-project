@@ -122,3 +122,101 @@ button {
   background: var(--bg);
   font-weight: 600;
 }
+
+/* ---- Equation Solver page ---- */
+
+.solver label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.solver input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 1.25rem; /* 16px or more stops phones zooming in on focus */
+}
+
+.solver input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.hint {
+  margin: 4px 0 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+
+.keypad button {
+  min-height: 48px;
+  font-size: 1.25rem;
+}
+
+.keypad .wide {
+  grid-column: span 2;
+  font-size: 1rem;
+}
+
+.solve-button {
+  min-height: 48px;
+  padding: 8px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.examples p {
+  margin: 0;
+}
+
+.result {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.result:empty {
+  display: none;
+}
+
+.result h3 {
+  margin: 16px 0 4px;
+  font-size: 1.1rem;
+}
+
+.result p {
+  margin: 0 0 8px;
+}
+
+.result ol {
+  margin: 0 0 12px;
+  padding-left: 24px;
+}
+
+.result .answer {
+  font-size: 1.5rem;
+  font-weight: 700;
+}

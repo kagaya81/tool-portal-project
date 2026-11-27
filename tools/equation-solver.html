@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equation Solver — Tool Portal</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/solver.js" defer></script>
+  <script src="../js/equation-solver.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Tool Portal</h1>
+      <button type="button" id="theme-toggle">Switch to dark theme</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <a class="back-link" href="../index.html">← Back to portal</a>
+    <h2>Equation Solver</h2>
+    <p>Find the missing number. Type a number sentence with one <strong>?</strong> in it, or tap the keypad, then press Solve.</p>
+
+    <form id="solver-form" class="solver" novalidate>
+      <label for="sentence">Number sentence</label>
+      <input id="sentence" type="text" autocomplete="off" autocapitalize="off" spellcheck="false"
+             placeholder="? + 7 = 15" aria-describedby="sentence-hint">
+      <p id="sentence-hint" class="hint">Whole numbers up to 100000, with + − × ÷ and up to two operations on a side.</p>
+
+      <div class="keypad" id="keypad">
+        <button type="button" data-insert="7">7</button>
+        <button type="button" data-insert="8">8</button>
+        <button type="button" data-insert="9">9</button>
+        <button type="button" data-insert="÷" aria-label="divide">÷</button>
+
+        <button type="button" data-insert="4">4</button>
+        <button type="button" data-insert="5">5</button>
+        <button type="button" data-insert="6">6</button>
+        <button type="button" data-insert="×" aria-label="multiply">×</button>
+
+        <button type="button" data-insert="1">1</button>
+        <button type="button" data-insert="2">2</button>
+        <button type="button" data-insert="3">3</button>
+        <button type="button" data-insert="−" aria-label="minus">−</button>
+
+        <button type="button" data-insert="0">0</button>
+        <button type="button" data-insert="?" aria-label="missing number">?</button>
+        <button type="button" data-insert="=" aria-label="equals">=</button>
+        <button type="button" data-insert="+" aria-label="plus">+</button>
+
+        <button type="button" data-action="backspace" class="wide">Backspace</button>
+        <button type="button" data-action="clear" class="wide">Clear</button>
+      </div>
+
+      <button type="submit" class="solve-button">Solve</button>
+    </form>
+
+    <div class="examples">
+      <p>Try an example:</p>
+      <button type="button" data-example="? + 7 = 15">? + 7 = 15</button>
+      <button type="button" data-example="3 × ? = 24">3 × ? = 24</button>
+      <button type="button" data-example="2 × ? + 3 = 11">2 × ? + 3 = 11</button>
+    </div>
+
+    <div id="result" class="result" role="status" aria-live="polite"></div>
+  </main>
+</body>
+</html>
