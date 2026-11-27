@@ -5,12 +5,11 @@
 - No frameworks, no libraries unless approved, and no build step. Files open directly in a browser.
 
 ## Project Structure
-The repository is nearly empty for now. Planned layout:
-
-- `index.html` — the entry page, at the top level
-- `css/` — stylesheets
-- `js/` — scripts
-- `assets/` — images and other static files
+- `index.html` — the portal homepage
+- `css/style.css` — shared styles, including the light and dark theme colours
+- `js/theme.js` — the theme toggle, shared by every page
+- `tools/` — one page per tool (`tool-1.html` is a placeholder for now)
+- `assets/` — images and other static files (not created yet; add when needed)
 
 Update this section whenever the structure changes.
 
@@ -31,6 +30,8 @@ Update this section whenever the structure changes.
 Only Phase 1 is agreed. Later phases are ideas to confirm with the user first.
 
 1. **Phase 1: the portal plus its first tool.** The homepage, the theme toggle, and one tool: a Math equation solver for the Singapore P4 syllabus. The visitor enters a number sentence with one blank (like `? + 7 = 15`) and gets the missing number, plain-language steps, and a check.
+   - [x] Portal page with subject cards, theme toggle, and a placeholder "Tool 1 — coming soon" card that opens `tools/tool-1.html` and returns with "Back to portal". Styling is simple and neutral on purpose; the visual design is chosen later.
+   - [ ] The real equation solver, replacing the placeholder.
 2. **Phase 2 (idea): grow the math tool.** Fractions and decimals.
 3. **Phase 3 (idea): tools for the other subjects.** English, Higher Chinese, Science.
 4. **Phase 4 (idea): easier browsing.** Search or filter on the homepage.
